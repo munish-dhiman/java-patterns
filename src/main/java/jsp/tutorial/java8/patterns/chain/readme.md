@@ -12,6 +12,7 @@ the servlet filters are a CoR implementation that allows multiple filters to pro
 (avax.servlet.Filter#doFilter()).
 
 At the Chain of Responsibility the following components are participating:
+
 * The _Handler_, an abstraction (interface/abstract) of the objects that may handle the requests.
 * The _ConcreteHandler(s)_, the Handler's implementation(s) for processing the request that is responsible for.
 * The _Client_, submits the request to the first handler on the chain.
@@ -39,11 +40,12 @@ the first level, the second level and the third level support. A support level w
 all the lower-ordered support levels fail.
 
 Adapting our scenario to the Chain of Responsibility pattern results to the following components mapping:
-* Client             --->   ChainTest -the unit test- (the client)
-* Handler            --->   HDSupport
-* ConcreteHandler1   --->   FirstLevelHDSupport
-* ConcreteHandler2   --->   SecondLevelHDSupport
-* ConcreteHandler3   --->   ThirdLevelHDSupport
+
+* Client --->   ChainTest -the unit test- (the client)
+* Handler --->   HDSupport
+* ConcreteHandler1 --->   FirstLevelHDSupport
+* ConcreteHandler2 --->   SecondLevelHDSupport
+* ConcreteHandler3 --->   ThirdLevelHDSupport
 
 ### Discussion
 ----

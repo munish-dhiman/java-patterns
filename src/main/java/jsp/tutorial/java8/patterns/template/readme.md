@@ -8,6 +8,7 @@ implementations of the variant portions of the algorithm to different subclasses
 Examples of this pattern in JDK are the non-abstract methods of java.io.InputStream, java.io.OutputStream class.
 
 At the Template Method pattern the following components are participating:
+
 * The _Template class_, the class (abstract usually) that defines the template method.
 * The _ConcreteTemplate(s)_, the template class implementations that redefines some portions of the template method.
 
@@ -42,9 +43,10 @@ is common for both engineers and assistant managers job positions, whereas the s
 The total score of the evaluation steps determines which candidates are suitable for the job position.
 
 Adapting our scenario to the Strategy pattern results to the following components mapping:
-* Template class      --->   EvaluationProcess (the evaluation process template)
-* ConcreteTemplate1   --->   EngineerEvaluationProcess (evaluation process for Engineers)
-* ConcreteTemplate2   --->   ManagerEvaluationProcess (evaluation process for Managers)
+
+* Template class --->   EvaluationProcess (the evaluation process template)
+* ConcreteTemplate1 --->   EngineerEvaluationProcess (evaluation process for Engineers)
+* ConcreteTemplate2 --->   ManagerEvaluationProcess (evaluation process for Managers)
 
 ### Discussion
 ----

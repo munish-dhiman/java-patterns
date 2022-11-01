@@ -9,13 +9,15 @@ observer is that it implements a certain interface.
 Examples of this pattern in JDK are all implementations of java.util.EventListener.
 
 At the Observer pattern the following components are participating:
+
 * The _Subject_, an abstraction (interface) for the subject implementations. This interface defines some
-commonly used methods for the subject such as (un)registering and notifying observers.
+  commonly used methods for the subject such as (un)registering and notifying observers.
 * The _Observer_, an abstraction (interface) for the observers implementations. An interface with a
-single method called by the subject when it's state changes.
-* The _ConcreteSubject(s)_, the subject implementation(s), contains a list of observers to notify them when its state changes.
+  single method called by the subject when it's state changes.
+* The _ConcreteSubject(s)_, the subject implementation(s), contains a list of observers to notify them when its state
+  changes.
 * The _ConcreteObserver(s)_, the observer implementation(s). Each observer registers itself with a concrete
-subject to receive its updates.
+  subject to receive its updates.
 
 ```
 +-----------------------+
@@ -47,12 +49,13 @@ Each department implements its own policy with respect to new job positions. For
 department consider only for jobs related to engineering.
 
 Adapting our scenario to the Observer pattern results to the following components mapping:
-* Subject             --->   JobNotificationSystem (the abstraction for a company's job system notification)
-* Observer            --->   JobListener (the abstraction for departments to get notified for the new internal jobs opportunities)
-* ConcreteSubject     --->   CompanyJobNotificationSystem (company's job system notification)
-* ConcreteObserver1   --->   EngineeringDepartment (the company's engineering department)
-* ConcreteObserver2   --->   SalesDepartment (the company's sales department)
-* ConcreteObserver3   --->   LogisticsDepartment (the company's logistics department)
+
+* Subject --->   JobNotificationSystem (the abstraction for a company's job system notification)
+* Observer --->   JobListener (the abstraction for departments to get notified for the new internal jobs opportunities)
+* ConcreteSubject --->   CompanyJobNotificationSystem (company's job system notification)
+* ConcreteObserver1 --->   EngineeringDepartment (the company's engineering department)
+* ConcreteObserver2 --->   SalesDepartment (the company's sales department)
+* ConcreteObserver3 --->   LogisticsDepartment (the company's logistics department)
 
 ### Discussion
 ----

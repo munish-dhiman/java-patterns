@@ -14,14 +14,15 @@ reverses the effects of the previous command execution.
 One of the example of this pattern in JDK, is the java.lang.Runnable and javax.swing.Action interfaces.
 
 At the Command pattern the following components are participating:
+
 * The _Command_, an abstraction (interface) for the command implementations, defines a common API for
-executing an operation.
+  executing an operation.
 * The _ConcreteCommand(s)_, the command implementations. Defines a binding between a receiver and an action
-by invoking the receiver's appropriate method.
+  by invoking the receiver's appropriate method.
 * The _Invoker_, forwards the request from client to the command object.
 * The _Receiver_, knows how to process the request.
 * The _Client_, creates the concrete command and injects its receiver. Creates the invoker, inject
-the appropriate command and execute the invoker's method to issue the request at the command.
+  the appropriate command and execute the invoker's method to issue the request at the command.
 
 ```
                                           +-------------+
@@ -51,13 +52,14 @@ The message dispatching is performed by the company's secretaries which coordina
 supervisor.
 
 Adapting our scenario to the Command pattern results to the following components mapping:
-* Client             --->   CommandTest -the unit test- (company/secretarial services)
-* Invoker            --->   ExecutorService (secretarial services supervisor, each thread represents a secretary)
-* Command            --->   java.lang.Runnable interface
-* ConcreteCommand1   --->   EmailCommand (command to inform candidate vi email)
-* ConcreteCommand2   --->   SMSCommand (command to inform candidate vi SMS)
-* Receiver1          --->   EmailDispatcher (the receiver for sending an email)
-* Receiver2          --->   SMSDispatcher (the receiver for sending a SMS)
+
+* Client --->   CommandTest -the unit test- (company/secretarial services)
+* Invoker --->   ExecutorService (secretarial services supervisor, each thread represents a secretary)
+* Command --->   java.lang.Runnable interface
+* ConcreteCommand1 --->   EmailCommand (command to inform candidate vi email)
+* ConcreteCommand2 --->   SMSCommand (command to inform candidate vi SMS)
+* Receiver1 --->   EmailDispatcher (the receiver for sending an email)
+* Receiver2 --->   SMSDispatcher (the receiver for sending a SMS)
 
 ### Discussion
 ----

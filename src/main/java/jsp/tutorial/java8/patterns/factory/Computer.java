@@ -8,23 +8,24 @@ package jsp.tutorial.java8.patterns.factory;
  */
 public abstract class Computer {
 
-	public enum ComputerModel {
-		HOME, SERVER;
-	}
+    public enum ComputerModel {
+        HOME,
+        SERVER;
+    }
 
-	protected ComputerSpecs specs;
+    protected ComputerSpecs specs;
 
-	public Computer(ComputerSpecs spec) {
-		this.specs = spec;
-	}
+    public Computer(ComputerSpecs spec) {
+        this.specs = spec;
+    }
 
-	/**
-	 * Returns the computer specs.
-	 *
-	 * @return the specs.
-	 */
-	public ComputerSpecs getSpecs() {
-		return specs;
-	}
+    /**
+     * Returns the computer specs.
+     *
+     * @return the specs.
+     */
+    public ComputerSpecs getSpecs() {
+        return specs;
+    }
 
 }

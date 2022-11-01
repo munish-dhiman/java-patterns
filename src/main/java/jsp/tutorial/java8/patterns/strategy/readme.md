@@ -9,6 +9,7 @@ One of the examples of this pattern in JDK, is Collections.sort() method that ta
 different implementations of Comparator interfaces.
 
 At the Strategy pattern the following components are participating:
+
 * The _Strategy_, an abstraction (interface) of the strategies via an interface or an abstract class.
 * The _ConcreteStrategy(ies)_, the strategy(ies) implementation(s) that contains the algorithm specific implementation.
 * The _Context_, the class which uses the Strategy.
@@ -35,14 +36,16 @@ Each candidate holds some degrees which will be evaluated by the employer in ord
 candidate for the job. The selection algorithm may vary, for example could be the degree's relevance with the field
 of the offering job position, the grade of the degree, the number of the degrees or a mix of the above.
 In our case two hiring strategies will be used:
+
 * one that the algorithm is based on the 'relevant degree' and the
 * other is based on the grade.
 
 Adapting our scenario to the Strategy pattern results to the following components mapping:
-* Context             --->   Employer (the employer)
-* Startegy            --->   HiringStrategy (hiring strategy common API)
-* ConcreteStartegy1   --->   DegreeRelevantHiringStrategy ('relevant degree' hiring strategy)
-* ConcreteStartegy2   --->   GradeHiringStrategy ('grade based' hiring strategy)
+
+* Context --->   Employer (the employer)
+* Startegy --->   HiringStrategy (hiring strategy common API)
+* ConcreteStartegy1 --->   DegreeRelevantHiringStrategy ('relevant degree' hiring strategy)
+* ConcreteStartegy2 --->   GradeHiringStrategy ('grade based' hiring strategy)
 
 ### Discussion
 ----

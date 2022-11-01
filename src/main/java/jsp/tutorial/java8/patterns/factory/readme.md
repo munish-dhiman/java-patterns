@@ -9,6 +9,7 @@ One of the examples of this pattern in JDK, is the java.util.ResourceBundle clas
 through the getBundle() method.
 
 At the Factory pattern the following components are participating:
+
 * The _factory_, creates one of a family of objects without exposing the instantiation logic to the client.
 * The _family of objects_, the objects share a _common interface_ (interface or abstract class).
 
@@ -32,15 +33,17 @@ At the Factory pattern the following components are participating:
 ----
 
 In our scenario, suppose that there is a company that constructs two computer models, the 'home' and the 'server' model.
-The production of its model is based on the respective specifications that dictates what are the parts that the model consists of;
+The production of its model is based on the respective specifications that dictates what are the parts that the model
+consists of;
 for example, the number of cores. disks and the memory. The client can order a computer by simply specifying the model
 and not the specification details.
 
 Adapting our scenario to the Factory pattern results to the following components mapping:
-* Factory                              --->   ComputerFactory
-* Family objects' common abstraction   --->   Computer
-* Family object 1                      --->   HomeComputer
-* Family object 2                      --->   ServerComputer
+
+* Factory --->   ComputerFactory
+* Family objects' common abstraction --->   Computer
+* Family object 1 --->   HomeComputer
+* Family object 2 --->   ServerComputer
 
 ### Discussion
 ----
